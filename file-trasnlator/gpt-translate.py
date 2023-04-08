@@ -3,6 +3,20 @@ import os
 import openai
 import json 
 
+# gpt-translator.py 
+# by Marc Alier 2023
+# This script uses the OpenAI API to translate text from one language to another
+# licensed under the GNU General Public License v3.0
+# you need to have a key to use the OpenAI API
+# you can get one here: https://beta.openai.com/docs/developer-quickstart/api-key
+# this program looks for the key in a file stated in the mykeypath variable 
+
+mykeypath='..//..//mykey.json'
+## sample content for the file mykey.json
+# {
+#  "key": "copy_your_key_here"
+# }
+
 
 MODEL = "gpt-3.5-turbo"
 
@@ -29,7 +43,7 @@ def translate(text, origin_language, destination_language):
     return response['choices'][0]['message']['content']
 
 def main():
-    with open('..//..//mykey.json', 'r') as f:
+    with open(mykeypath, 'r') as f:
         data = json.load(f)
         print("OK")
      # Initialize the OpenAI API
