@@ -1,0 +1,75 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        table.diff {font-family:Courier; border:medium;}
+        .diff_header {background-color:#e0e0e0}
+        td.diff_header {text-align:right}
+        .diff_next {background-color:#c0c0c0}
+        .diff_add {background-color:#aaffaa}
+        .diff_chg {background-color:#ffff77}
+        .diff_sub {background-color:#ffaaaa}
+    </style>
+</head>
+
+<body>
+    
+    <table class="diff" id="difflib_chg_to0__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">document_v1.txt</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">document_v2.txt</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to0__0"><a href="#difflib_chg_to0__top">t</a></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"><a href="#difflib_chg_to0__top">t</a></td><td class="diff_header" id="to0_1">1</td><td nowrap="nowrap"><span class="diff_add">#&nbsp;gpt-translator</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_2">2</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_3">3</td><td nowrap="nowrap"><span class="diff_add">By&nbsp;Marc&nbsp;Alier&nbsp;forment&nbsp;@granludo&nbsp;https://wasabi.essi.upc.edu/ludo&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_4">4</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_5">5</td><td nowrap="nowrap"><span class="diff_add">Licensed&nbsp;under&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;v3.0</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_6">6</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_7">7</td><td nowrap="nowrap"><span class="diff_add">Simple&nbsp;python&nbsp;3&nbsp;program&nbsp;that&nbsp;uses&nbsp;OpenAi's&nbsp;GPT-3.5-turbo&nbsp;model&nbsp;to&nbsp;translate&nbsp;files&nbsp;from&nbsp;one&nbsp;language&nbsp;to&nbsp;another.&nbsp;Breaks&nbsp;down&nbsp;the&nbsp;file&nbsp;into&nbsp;chunks&nbsp;of&nbsp;20&nbsp;lines.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_8">8</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_9">9</td><td nowrap="nowrap"><span class="diff_add">##&nbsp;requirement</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_10">10</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_11">11</td><td nowrap="nowrap"><span class="diff_add">You&nbsp;need&nbsp;to&nbsp;have&nbsp;a&nbsp;key&nbsp;to&nbsp;use&nbsp;the&nbsp;OpenAI&nbsp;API&nbsp;&nbsp;you&nbsp;can&nbsp;get&nbsp;one&nbsp;here:&nbsp;https://beta.openai.com/docs/developer-quickstart/api-key&nbsp;&nbsp;this&nbsp;program&nbsp;looks&nbsp;for&nbsp;the&nbsp;key&nbsp;in&nbsp;a&nbsp;file&nbsp;stated&nbsp;in&nbsp;the&nbsp;"mykeypath"&nbsp;variable&nbsp;by&nbsp;default&nbsp;on&nbsp;the&nbsp;path&nbsp;'..//..//mykey.json'&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_12">12</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_13">13</td><td nowrap="nowrap"><span class="diff_add">You&nbsp;need&nbsp;to&nbsp;install&nbsp;the&nbsp;json,&nbsp;and&nbsp;openai&nbsp;packages</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_14">14</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_15">15</td><td nowrap="nowrap"><span class="diff_add">&gt;&nbsp;pip&nbsp;install&nbsp;openai</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_16">16</td><td nowrap="nowrap"><span class="diff_add">&gt;&nbsp;pip&nbsp;install&nbsp;json</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_17">17</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_18">18</td><td nowrap="nowrap"><span class="diff_add">##&nbsp;usage&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_19">19</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_20">20</td><td nowrap="nowrap"><span class="diff_add">&gt;&nbsp;python3&nbsp;gpt-translate.py&nbsp;origin_file&nbsp;origin_languaga&nbsp;destination_language&nbsp;destination_file</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_21">21</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_22">22</td><td nowrap="nowrap"><span class="diff_add">**Example**</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_23">23</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_24">24</td><td nowrap="nowrap"><span class="diff_add">&gt;&nbsp;python3&nbsp;gpt-translate.py&nbsp;sample.md&nbsp;catalan&nbsp;italian&nbsp;sample_translated.md&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_25">25</td><td nowrap="nowrap"><span class="diff_add">&nbsp;</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to0_26">26</td><td nowrap="nowrap"><span class="diff_add">Have&nbsp;fun.</span></td></tr>
+        </tbody>
+    </table>
+    <table class="diff" summary="Legends">
+        <tr> <th colspan="2"> Legends </th> </tr>
+        <tr> <td> <table border="" summary="Colors">
+                      <tr><th> Colors </th> </tr>
+                      <tr><td class="diff_add">&nbsp;Added&nbsp;</td></tr>
+                      <tr><td class="diff_chg">Changed</td> </tr>
+                      <tr><td class="diff_sub">Deleted</td> </tr>
+                  </table></td>
+             <td> <table border="" summary="Links">
+                      <tr><th colspan="2"> Links </th> </tr>
+                      <tr><td>(f)irst change</td> </tr>
+                      <tr><td>(n)ext change</td> </tr>
+                      <tr><td>(t)op</td> </tr>
+                  </table></td> </tr>
+    </table>
+</body>
+
+</html>

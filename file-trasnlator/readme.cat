@@ -1,0 +1,20 @@
+# gpt-traductor
+
+Per Marc Alier @granludo https://wasabi.essi.upc.edu/ludo
+
+Llicenciat sota la Llicència Pública General de GNU v3.0
+
+Programa senzill en python 3 que utilitza el model GPT-3.5-turbo d'OpenAi per traduir fitxers d'un idioma a un altre. Divideix el fitxer en fragments de 20 línies.
+
+## requisits
+
+Necessites tenir una clau per usar l'API d'OpenAI, pots obtenir-ne una aquí: https://beta.openai.com/docs/developer-quickstart/api-key aquest programa busca la clau en un fitxer indicat a la variable "mykeypath" per defecte en la ruta '..//..//mykey.json'
+
+Necessites instal·lar els paquets json i openai
+
+> pip install openai
+> pip install json
+
+## ús
+
+> python3 gpt-traductor.py fitxer_origen idioma_origen idioma_destí fitxer_destí**Exemple**Que et diverteixis.
