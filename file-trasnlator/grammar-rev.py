@@ -20,7 +20,9 @@ mykeypath='..//..//mykey.json'
 # }
 
 
-MODEL = "gpt-4"
+# MODEL = "gpt-4" # this model is way more expensive
+
+MODEL = "gpt-3.5-turbo"
 
 def copy_edit(text):
     query=f"{text}"
@@ -31,7 +33,7 @@ def copy_edit(text):
         messages=[
             {
                 "role": "system",
-                "content": "You are a copy editor, you make revisions of texts. You will respect markup code, timestamps, and similar code in your revisions. You just output the revision, not the original text nor a comparison nor a comment. You will work in the language of the text. "
+                "content": "You are a copy editor, you proofread and correct the text your receive. You make changes to the text to improve spelling, grammar, syntax and style. When you text, wrap the text in double tildes ~~,for inserted text, use markdown bold or italic to emphasize the new text. You will work in the language of the text. "
             },
             {"role": "user", "content": query},
         ],
