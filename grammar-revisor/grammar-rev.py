@@ -1,6 +1,8 @@
 import openai, json
 import tkinter as tk
 from tkinter import filedialog,  scrolledtext
+import threading
+
 
 # gramar-rev.py 
 # by Marc Alier 2023
@@ -62,8 +64,8 @@ def grammar_rev(lines_per_chunk=20):
     text_area2.insert(tk.END, outuput_text)
 
 def print_status(message):
-    status_text.insert(tk.END, message + '\n')
-    status_text.see(tk.END)
+    root.after(0, update_gui, message)
+    
 
 def load_file():
     file_path = filedialog.askopenfilename(filetypes=[('Text Files', '*.txt'), ('Markdown Files','*.md') ])    
@@ -83,13 +85,22 @@ def save_file():
     with open(file_path, 'w') as file:
         file.write(text_area2.get('1.0', tk.END))
 
+
+def update_gui(message):
+    status_text.insert(tk.END, message + '\n')
+    status_text.see(tk.END)
+
+def start_process():
+    process_thread = threading.Thread(target=grammar_rev)
+    process_thread.start()
+
 root = tk.Tk()
 # Create a top frame for the buttons
 button_frame = tk.Frame(root)
 button_frame.pack(fill=tk.X, side=tk.TOP)
 
 # Create buttons
-some_button = tk.Button(button_frame, text='Run process', command=lambda: grammar_rev())
+some_button = tk.Button(button_frame, text='Run process', command=lambda: start_process())
 some_button.pack(side=tk.LEFT)
 load_button = tk.Button(button_frame, text='Load file', command=load_file)
 load_button.pack(side=tk.LEFT)
