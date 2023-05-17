@@ -40,7 +40,7 @@ def copy_edit(text):
             },
             {"role": "user", "content": query},
         ],
-        max_tokens=1000,
+        max_tokens=4000,
         n=1,
         stop=None,
         temperature=0,
@@ -50,7 +50,7 @@ def copy_edit(text):
 
     return response['choices'][0]['message']['content']
 
-def grammar_rev(lines_per_chunk=20):
+def grammar_rev(lines_per_chunk=120):
     i=0
     text=text_area1.get('1.0', tk.END).split("\n")
     outuput_text=""
